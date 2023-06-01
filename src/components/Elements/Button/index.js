@@ -7,8 +7,8 @@ export const Button = props => {
   }
 
   return (
-    <div className="flex">
-      <button className="w-full bg-red-600 p-2 rounded-md mt-8 text-white">
+    <div className="flex justify-center px-6 py-2">
+      <button className="w-full bg-mandarin p-2 rounded-md mt-8 text-black">
         {buttonTitle}
       </button>
     </div>

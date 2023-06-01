@@ -12,16 +12,21 @@ export const Login = () => {
         />
       </div>
       <div className="mx-auto flex flex-col justify-center w-1/2 h-screen bg-gray-950">
-        <div className="text-center text-orange-300">Title</div>
-        <div className="text-center text-gray-300">Description</div>
-        <div className="px-8 pb-16 pt-8">
-          <div className="flex flex-col text-gray-300">
+        <div className="text-center text-mandarin text-2xl">Welcome back!</div>
+        <div className="text-center text-metal">
+          Login and pick your weapon!
+        </div>
+        <div className="p-16">
+          <div className="flex flex-col text-metal py-2 px-6">
             <label>username :</label>
-            <input className="h-8 rounded-md" />
+            <input className="h-8 rounded-md border-2 bg-transparent border-metal" />
           </div>
-          <div className="flex flex-col text-gray-300">
+          <div className="flex flex-col text-metal px-6">
             <label>password :</label>
-            <input type="password" className="h-8 rounded-md" />
+            <input
+              type="password"
+              className="h-8 rounded-md bg-transparent border-2 border-metal"
+            />
           </div>
           <Button p="Login" />
         </div>
