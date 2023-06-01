@@ -1,14 +1,9 @@
-import "./App.css";
-import Login from "./component/login";
+import Login from "./pages/login";
 
 const App = () => {
   return (
     <div
       style={{
-        display: "flex",
-        flexAlign: "row",
-        alignItems: "center",
-        justifyContent: "center",
         width: "100%",
         height: "100vh",
       }}
