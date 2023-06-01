@@ -11,7 +11,7 @@ export const Login = () => {
           alt=""
         />
       </div>
-      <div className="mx-auto flex flex-col justify-center w-1/2 h-screen bg-gray-950">
+      <form className="mx-auto flex flex-col justify-center w-1/2 h-screen bg-gray-950">
         <div className="text-center text-mandarin text-2xl">Welcome back!</div>
         <div className="text-center text-metal">
           Login and pick your weapon!
@@ -28,9 +28,11 @@ export const Login = () => {
               className="h-8 rounded-md bg-transparent border-2 border-metal"
             />
           </div>
-          <Button p="Login" />
         </div>
-      </div>
+        <div className="flex justify-center items-center mx-auto">
+          <Button title="Login" variant="bg-mandarin" />
+        </div>
+      </form>
     </div>
   );
 };
