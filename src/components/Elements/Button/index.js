@@ -1,6 +1,4 @@
-import React from "react";
-
-export const Button = props => {
+const Button = props => {
   const {title, variant = "bg-black"} = props;
   return (
     <button
@@ -11,3 +9,5 @@ export const Button = props => {
     </button>
   );
 };
+
+export default Button;

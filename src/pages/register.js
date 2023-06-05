@@ -1,5 +1,5 @@
 import React from "react";
-import {Button} from "./button";
+import {Button} from "../components/Elements/Button";
 
 export const Register = () => {
   return (
@@ -17,7 +17,7 @@ export const Register = () => {
         <label>password</label>
         <input type="password" />
       </div>
-      <Button p="Register" />
+      <Button />
     </div>
   );
 };
