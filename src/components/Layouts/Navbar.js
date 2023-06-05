@@ -33,6 +33,14 @@ export const Navbar = () => {
               Register
             </Link>
           </li>
+          <li>
+            <Link
+              to={"/rockpaperscissors"}
+              className="text-xl hover:text-metal duratin-500"
+            >
+              Rock Paper Scissors
+            </Link>
+          </li>
         </ul>
       </nav>
       <Outlet />
