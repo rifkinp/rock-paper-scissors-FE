@@ -2,7 +2,7 @@ const Button = props => {
   const {title, variant = "bg-black"} = props;
   return (
     <button
-      className={`${variant} h-10 px-12 rounded-md text-black`}
+      className={`${variant} h-10 px-12 rounded-md text-black m-2`}
       type="submit"
     >
       {title}
