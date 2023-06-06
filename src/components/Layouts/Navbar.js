@@ -4,59 +4,41 @@ import {Link, Outlet} from "react-router-dom";
 export const Navbar = () => {
   return (
     <div className="w-full h-screen flex flex-col">
-      <nav className="p-5 text-mandarin bg-gray-600 cursor-pointer flex justify-between items-center">
+      <nav className="p-3 text-mandarin bg-gray-800 cursor-pointer flex justify-between items-center drop-shadow-lg">
         <div>
           <span className="text-2xl font-bold">RPS Game</span>
         </div>
-        <ul className="flex items-center justify-between gap-10">
-          <li>
-            <Link
-              to={"/dashboard"}
-              className="text-xl hover:text-metal duratin-500"
-            >
+        <ul className="flex items-center justify-between gap-2">
+          <Link to={"/dashboard"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
               Dashboard
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={"/login"}
-              className="text-xl hover:text-metal duratin-500"
-            >
+            </li>
+          </Link>
+          <Link to={"/login"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
               Login
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={"/registration"}
-              className="text-xl hover:text-metal duratin-500"
-            >
+            </li>
+          </Link>
+          <Link to={"/registration"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
               Register
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={"/rockpaperscissors"}
-              className="text-xl hover:text-metal duratin-500"
-            >
-              Rock Paper Scissors
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={"/create-room"}
-              className="text-xl hover:text-metal duratin-500"
-            >
+            </li>
+          </Link>
+          <Link to={"/rockpaperscissors"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
+              Versus Com
+            </li>
+          </Link>
+          <Link to={"/create-room"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
               Create Room
-            </Link>
-          </li>
-          <li>
-            <Link
-              to={"/game-history"}
-              className="text-xl hover:text-metal duratin-500"
-            >
+            </li>
+          </Link>
+          <Link to={"/game-history"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
               Game History
-            </Link>
-          </li>
+            </li>
+          </Link>
         </ul>
       </nav>
       <Outlet />

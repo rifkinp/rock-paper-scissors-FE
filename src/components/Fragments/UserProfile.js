@@ -11,6 +11,7 @@ const UserProfile = () => {
           name="userName"
           placeholder="rpsgames"
           type="text"
+          disable
         />
         <InputForm
           title="Fullname"
