@@ -4,6 +4,8 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import {Navbar} from "./components/Layouts/Navbar";
 import RockPaperScissors from "./pages/RockPaperScissors";
+import CreateRoom from "./pages/CreateRoom";
+import GameHistoryTable from "./components/Fragments/GameHistoryTable";
 
 const App = () => {
   return (
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="/registration" element={<Registration />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/rockpaperscissors" element={<RockPaperScissors />} />
+        <Route path="/create-room" element={<CreateRoom />} />
+        <Route path="/game-history" element={<GameHistoryTable />} />
       </Route>
       <Route path="*" element={<div>HALAMAN 404</div>} />
     </Routes>

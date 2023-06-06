@@ -15,13 +15,18 @@ module.exports = {
       white: colors.white,
       gray: colors.gray,
       orange: colors.orange,
+      emerald: colors.emerald,
+      indigo: colors.indigo,
+      yellow: colors.yellow,
+      green: colors.green,
+      blue: colors.blue,
       metal: "#d1d5db",
       mandarin: "#FFB548",
     },
     fontSize: {
       xs: ["14px", {lineHeight: "24px", letterSpacing: "-0.-0.03em,"}], //p
       sm: ["16px", {lineHeight: "28px", letterSpacing: "-0.-0.03em,"}], //h6
-      lg: ["18px", {lineHeight: "28px", letterSpacing: "-0.-0.03em,"}],// h5
+      lg: ["18px", {lineHeight: "28px", letterSpacing: "-0.-0.03em,"}], // h5
       xl: ["24px", {lineHeight: "36px", letterSpacing: "-0.-0.03em,"}],
       "2xl": ["36px", {lineHeight: "48px", letterSpacing: "-0.-0.032em,"}],
       "3xl": ["48px", {lineHeight: "56px", letterSpacing: "-0.-0.032em,"}],
