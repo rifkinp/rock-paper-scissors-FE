@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import {DefaultProfile} from "../components/Elements/DefaultProfile";
 import Button from "../components/Elements/Button";
 import UserProfile from "../components/Fragments/UserProfile";
@@ -9,12 +9,12 @@ const Dashboard = () => {
     {
       title: "Game One",
       winner: "Haji",
-      status: "Waiting",
+      status: "Waiting Player",
     },
     {
       title: "Game Two",
       winner: "Latunrung",
-      status: "Waiting",
+      status: "Waiting Player",
     },
     {
       title: "Game Three",
