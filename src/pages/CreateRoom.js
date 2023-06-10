@@ -5,12 +5,17 @@ import Button from "../components/Elements/Button";
 
 const CreateRoom = () => {
   return (
-    <div className="w-full h-full flex flex-col justify-evenly items-center bg-metal">
+    <div className="w-full h-full flex flex-col justify-evenly items-center bg-gray-900">
       <div>
-        <div className="text-2xl font-bold text-mandarin mb-10 text-center">
-          Input game room name
+        <div className="text-2xl font-bold text-metal mb-10 text-center">
+          <input
+            type="text"
+            className="w-full text-mandarin rounded-md border-2 bg-transparent border-metal py-1 px-3 focus:text-white"
+            placeholder="Input Game Room Name"
+            name="room-name"
+          />
         </div>
-        <div className="text-xl font-semibold text-gray-800 mb-10 text-center">
+        <div className="text-xl font-semibold text-mandarin mb-10 text-center">
           Your Choice
         </div>
       </div>

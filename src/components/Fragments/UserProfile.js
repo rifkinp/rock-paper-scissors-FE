@@ -14,7 +14,7 @@ const UserProfile = () => {
 
   return (
     <div className="w-full h-full px-10 flex justify-center">
-      <form>
+      <form className="w-full max-w-md">
         <InputForm
           title="Username"
           name="userName"

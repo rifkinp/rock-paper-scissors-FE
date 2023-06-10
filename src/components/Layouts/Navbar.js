@@ -6,7 +6,9 @@ export const Navbar = () => {
     <div className="w-full h-screen flex flex-col">
       <nav className="p-3 text-mandarin bg-gray-800 cursor-pointer flex justify-between items-center drop-shadow-lg">
         <div>
-          <span className="text-2xl font-bold">RPS Game</span>
+          <Link to={"/"}>
+            <span className="text-2xl font-bold">RPS Game</span>
+          </Link>
         </div>
         <ul className="flex items-center justify-between gap-2">
           <Link to={"/dashboard"} className="text-lg font-medium">

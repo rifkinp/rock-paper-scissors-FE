@@ -1,13 +1,18 @@
 import React from "react";
+import IMAGES from "../components/Assets";
 
 const Home = () => {
   return (
-    <div className="flex w-full h-full">
-      <img
-        src="https://images.unsplash.com/photo-1618214839021-3fbe98a597bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80"
-        className="flex w-full h-full object-cover"
-        alt=""
-      />
+    <div className="w-full h-full flex flex-col justify-center items-center bg-gray-900">
+      <div
+        className="w-48 h-48 bg-no-repeat bg-center object-cover flex justify-center items-center"
+        style={{
+          backgroundImage: `url(${IMAGES.RpsLogo})`,
+        }}
+      ></div>
+      <span className="text-2xl font-bold text-metal mb-10 text-center">
+        "Unleash Your Strategy and Conquer with Rock, Paper, Scissors!"
+      </span>
     </div>
   );
 };

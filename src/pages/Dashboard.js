@@ -53,7 +53,11 @@ const Dashboard = () => {
         <div className="border-2 my-5"></div>
         <div className="items-center flex justify-center text-xl font-bold">
           <Link to={"/create-room"}>
-            <Button title="Create Room Vs Player" variant="bg-mandarin" />
+            <Button
+              title="Create Room Vs Player"
+              variant="bg-mandarin"
+              size="w-full"
+            />
           </Link>
         </div>
         <div className="flex flex-row flex-wrap">
