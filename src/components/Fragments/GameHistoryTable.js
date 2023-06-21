@@ -1,5 +1,4 @@
 import React from "react";
-import IMAGES from "../Assets";
 import Emblem from "../Assets/emblem.svg";
 
 const GameHistoryTable = () => {
