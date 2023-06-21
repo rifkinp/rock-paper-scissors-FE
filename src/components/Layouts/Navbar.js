@@ -41,6 +41,11 @@ export const Navbar = () => {
               Game History
             </li>
           </Link>
+          <Link to={"/testos"} className="text-lg font-medium">
+            <li className=" w-32 justify-center flex py-4 px-2 rounded-xl hover:bg-gray-600 duration-500">
+              Testos
+            </li>
+          </Link>
         </ul>
       </nav>
       <Outlet />

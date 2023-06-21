@@ -6,6 +6,7 @@ const IMAGES = {
   RpsLogo: require("./logo.png"),
   RpsRefresh: require("./refresh.png"),
   EmblemLogo: require("./emblem.svg"),
+  BackgroundWow: require("./backgroundwow.jpeg"),
 };
 
 export default IMAGES;
