@@ -2,6 +2,7 @@ import React from "react";
 import RpsImageContainer from "../components/Elements/RpsImageContainer";
 import IMAGES from "../components/Assets";
 import Button from "../components/Elements/Button";
+import TitleH1 from "../components/Elements/TitleH1";
 
 const CreateRoom = () => {
   return (
@@ -15,9 +16,7 @@ const CreateRoom = () => {
             name="room-name"
           />
         </div>
-        <div className="text-xl font-semibold text-mandarin mb-10 text-center">
-          Your Choice
-        </div>
+        <TitleH1 title1="Create Room" />
       </div>
       <div className="w-100 flex gap-20">
         <RpsImageContainer src={IMAGES.RpsBatu} id="player1" />

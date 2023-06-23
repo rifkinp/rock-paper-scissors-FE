@@ -1,4 +1,5 @@
 import ImagePlaceholder from "../Elements/ImagePlaceholder";
+import TitleH1 from "../Elements/TitleH1";
 
 const AuthLayouts = props => {
   const {children, title} = props;
@@ -6,9 +7,7 @@ const AuthLayouts = props => {
     <div className="flex w-full h-full items-center">
       <ImagePlaceholder />
       <div className="flex-col flex justify-center w-1/2 h-full bg-gray-950 items-center">
-        <h1 className="text-center text-mandarin text-2xl font-bold">
-          Welcome back!
-        </h1>
+        <TitleH1 title1="Welcome Back" />
         <h6 className="text-center text-metal font-medium mb-6">
           {title} and pick your weapon!
         </h6>

@@ -41,13 +41,12 @@ const Dashboard = () => {
   ]);
   return (
     <div className="w-full h-screen flex">
-      <div className="w-2/3 h-full bg-blue-800 p-5">
+      <div className="w-2/3 h-full bg-gray-400 p-5">
         <span className="text-gray-900 text-2xl font-bold my-5 items-center flex justify-center ">
           Versus Computer Room
           <div className="items-center flex justify-center  text-xl">
             <Link to={"/rockpaperscissors"}>
               <Button title="Play Here" variant="bg-mandarin" />
-              <Button title="Create Room" variant="bg-mandarin" />
             </Link>
           </div>
         </span>
