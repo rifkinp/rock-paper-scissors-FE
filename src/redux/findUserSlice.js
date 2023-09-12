@@ -7,21 +7,18 @@ const initialState = {
   loading: false,
 };
 
-export const fetchFindUser = createAsyncThunk(
-  'findUser/fetchFindUser',
-  async () => {
-    const token = localStorage.getItem('accessToken');
-    const hasilDataBio = await axios.get(
-      'https://chapter-platinum-team-2-koet.vercel.app/user/finduser',
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+export const fetchFindUser = createAsyncThunk('findUser/fetchFindUser', async () => {
+  const token = localStorage.getItem('accessToken');
+  const hasilDataBio = await axios.get(
+    'https://rock-paper-scissors-be.vercel.app/users/detail',
+    {
+      headers: {
+        Authorization: `Bearer ${token}`,
       },
-    );
-    return hasilDataBio.data;
-  },
-);
+    },
+  );
+  return hasilDataBio.data;
+});
 
 export const findUserSlice = createSlice({
   name: 'findUser',

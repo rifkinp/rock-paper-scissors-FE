@@ -25,7 +25,7 @@ function VersusComputer() {
     const token = localStorage.getItem('accessToken');
     try {
       const hitApiVersusCom = await axios.post(
-        'https://chapter-platinum-team-2-koet.vercel.app/user/vscom',
+        'https://rock-paper-scissors-be.vercel.app/games/room-vs-computer',
         { choicePlayer1: choiceUser },
         {
           headers: {

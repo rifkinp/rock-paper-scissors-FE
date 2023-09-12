@@ -9,7 +9,7 @@ function UserGameHistory() {
       try {
         const token = localStorage.getItem('accessToken');
         const hasilGameHistory = await axios.get(
-          'https://chapter-platinum-team-2-koet.vercel.app/user/pvphistory',
+          'https://rock-paper-scissors-be.vercel.app/games/history',
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -26,27 +26,21 @@ function UserGameHistory() {
   }, []);
 
   return (
-    <div className="w-full h-full flex flex-row">
-      <div className="absolute overflow-auto h-[390px]">
+    <div className='w-full h-full flex flex-row'>
+      <div className='absolute overflow-auto h-[390px]'>
         {histories.map(() => (
-          <div className="absolute w-[500px] flex">
-            <div className="absolute w-full flex justify-center items-center bg-black">
+          <div className='absolute w-[500px] flex'>
+            <div className='absolute w-full flex justify-center items-center bg-black'>
               Tes
             </div>
             <div className="m-[5px] text-[30px] bg-[#9e5022] font-['Chicle'] rounded-[10px] flex justify-center items-center w-[200px] cursor-default">
-              {/* {item.roomName} */}
-              {' '}
-              Romm A
+              {/* {item.roomName} */} Romm A
             </div>
             <div className="m-[5px] text-[30px] bg-[#b67444] font-['Chicle'] rounded-[10px] flex justify-center items-center w-[250px] cursor-default">
-              {/* {item.updatedAt} */}
-              {' '}
-              06 Juni 1993
+              {/* {item.updatedAt} */} 06 Juni 1993
             </div>
             <div className="m-[5px] text-[30px] bg-black font-['Chicle'] rounded-[10px] flex justify-center items-center w-[100px] cursor-default">
-              {/* {item.hasilPlayer} */}
-              {' '}
-              WON
+              {/* {item.hasilPlayer} */} WON
             </div>
             <Button />
           </div>

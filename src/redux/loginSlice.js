@@ -13,7 +13,7 @@ const initialState = {
 export const fetchLogin = createAsyncThunk('login/fetchLogin', async (data) => {
   try {
     const response = await axios.post(
-      'https://chapter-platinum-team-2-koet.vercel.app/user/login',
+      'https://rock-paper-scissors-be.vercel.app/users/login',
       data,
     );
     const { accessToken } = response.data;

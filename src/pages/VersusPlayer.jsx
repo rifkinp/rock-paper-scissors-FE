@@ -27,7 +27,7 @@ function VersusPlayer() {
   useEffect(() => {
     const fetchSingleRoom = async () => {
       const responseSingleRoom = await axios.get(
-        `https://chapter-platinum-team-2-koet.vercel.app/user/singleRoom/${id}`,
+        `https://rock-paper-scissors-be.vercel.app/games/room/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -78,7 +78,7 @@ function VersusPlayer() {
 
     try {
       await axios.put(
-        `https://chapter-platinum-team-2-koet.vercel.app/user/joinRoom/${id}`,
+        `https://rock-paper-scissors-be.vercel.app/games/room/${id}`,
         { choicePlayer2: player2Choice },
         {
           headers: {

@@ -26,7 +26,7 @@ function CreateRoom() {
     const token = localStorage.getItem('accessToken');
     try {
       await axios.post(
-        'https://chapter-platinum-team-2-koet.vercel.app/user/createroom',
+        'https://rock-paper-scissors-be.vercel.app/games/createroom',
         { roomName, choicePlayer1: choice },
         {
           headers: {
@@ -44,8 +44,8 @@ function CreateRoom() {
 
   return (
     <Background>
-      <div className="relative w-full h-[20px] flex">
-        <div className="absolute w-full h-full top-[-85px] left-[20px] flex justify-center items-center">
+      <div className='relative w-full h-[20px] flex'>
+        <div className='absolute w-full h-full top-[-85px] left-[20px] flex justify-center items-center'>
           <GameNavbar />
         </div>
       </div>
@@ -57,7 +57,7 @@ function CreateRoom() {
       <Gap height={80} />
       <ChoiceRoom handleClick={handleChoiceClick} choiceResponse={choice} />
       <Gap height={120} />
-      <ButtonYellow labelBtnYlw="Create Room" handleClick={handleCreateRoom} />
+      <ButtonYellow labelBtnYlw='Create Room' handleClick={handleCreateRoom} />
     </Background>
   );
 }

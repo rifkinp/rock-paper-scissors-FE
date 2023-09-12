@@ -25,7 +25,7 @@ function UserProfile() {
     const fetchBios = async () => {
       try {
         const hasilDataBio = await axios.get(
-          'https://chapter-platinum-team-2-koet.vercel.app/user/finduser',
+          'https://rock-paper-scissors-be.vercel.app/users/detail',
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -87,7 +87,7 @@ function UserProfile() {
             getDownloadURL(imageRef).then(async (res) => {
               const linkImages = await res;
               await axios.put(
-                'https://chapter-platinum-team-2-koet.vercel.app/user/uploadprofile',
+                'https://rock-paper-scissors-be.vercel.app/user/uploadprofile',
                 {
                   link: linkImages,
                 },

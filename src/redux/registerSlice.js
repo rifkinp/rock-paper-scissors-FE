@@ -14,7 +14,7 @@ const initialState = {
 export const fetchRegister = createAsyncThunk('register/fetchRegister', async (data) => {
   try {
     const response = await axios.post(
-      'https://chapter-platinum-team-2-koet.vercel.app/user/register',
+      'https://rock-paper-scissors-be.vercel.app/users/register',
       data,
     );
     alert('Sukses Registrasi, Silahkan Login');

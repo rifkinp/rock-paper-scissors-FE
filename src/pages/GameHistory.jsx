@@ -14,7 +14,7 @@ function GameHistory() {
     const fetchGameHistory = async () => {
       const token = localStorage.getItem('accessToken');
       const hasilGameHistory = await axios.get(
-        'https://chapter-platinum-team-2-koet.vercel.app/user/pvphistory',
+        'https://rock-paper-scissors-be.vercel.app/games/history',
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -30,7 +30,7 @@ function GameHistory() {
     //  generate pdf then open it
     const token = localStorage.getItem('accessToken');
     const response = await axios.get(
-      'https://chapter-platinum-team-2-koet.vercel.app/user/generate-pdf',
+      'https://rock-paper-scissors-be.vercel.app/user/generate-pdf',
       {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -27,7 +27,7 @@ function FormUpdatePopUp(props) {
     const updatePhone = e.target[3].value || phoneNumber;
     try {
       await axios.put(
-        'https://chapter-platinum-team-2-koet.vercel.app/user/updatebio',
+        'https://rock-paper-scissors-be.vercel.app/users/detail',
         {
           fullname: updatefullname,
           address: updateAddress,
@@ -48,65 +48,55 @@ function FormUpdatePopUp(props) {
   };
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50">
+    <div className='fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50'>
       <form
-        className="w-full max-w-sm p-4 flex flex-col bg-stone-900 rounded-lg"
+        className='w-full max-w-sm p-4 flex flex-col bg-stone-900 rounded-lg'
         onSubmit={handleFormSubmit}
       >
-        <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">
-          User ID :
-        </span>
+        <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">User ID :</span>
         <Input
           className="px-3 bg-[#fff5ca] text-xl text-black opacity-100 border-0 font-['Chicle'] enabled:opacity-80 mb-2"
-          name="username"
+          name='username'
           placeholder={username || ''}
-          type="text"
-          disabled="true"
+          type='text'
+          disabled='true'
         />
-        <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">
-          Email :
-        </span>
+        <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">Email :</span>
         <Input
           className="px-3 bg-[#fff5ca] text-xl text-black opacity-100 border-0 font-['Chicle'] enabled:opacity-80 mb-2"
-          name="email"
+          name='email'
           placeholder={email || ''}
-          disabled="true"
-          type="email"
+          disabled='true'
+          type='email'
         />
         <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">
           Full Name :
         </span>
         <Input
           className="px-3 bg-[#fff5ca] text-xl text-black opacity-100 border-0 font-['Chicle'] enabled:opacity-80 mb-2"
-          name="fullName"
+          name='fullName'
           placeholder={fullname || ''}
-          type="text"
+          type='text'
         />
         <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">
           Phone Number :
         </span>
         <Input
           className="px-3 bg-[#fff5ca] text-xl text-black opacity-100 border-0 font-['Chicle'] enabled:opacity-80 mb-2"
-          name="phoneNumber"
+          name='phoneNumber'
           placeholder={phoneNumber || ''}
-          type="text"
+          type='text'
         />
-        <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">
-          Address :
-        </span>
+        <span className="text-sm text-[#fff5ca] font-['Chicle'] p-0 m-0">Address :</span>
         <Input
           className="px-3 bg-[#fff5ca] text-xl text-black opacity-100 border-0 font-['Chicle'] enabled:opacity-80 mb-2"
-          name="address"
+          name='address'
           placeholder={address || ''}
-          type="text"
+          type='text'
         />
-        <div className="flex justify-center gap-4">
-          <Button
-            variant="bg-[#9e5022]"
-            title="Submit"
-            onClick={onFormSubmit}
-          />
-          <Button variant="bg-[#9e5022]" title="Cancel" onClick={onClose} />
+        <div className='flex justify-center gap-4'>
+          <Button variant='bg-[#9e5022]' title='Submit' onClick={onFormSubmit} />
+          <Button variant='bg-[#9e5022]' title='Cancel' onClick={onClose} />
         </div>
       </form>
     </div>
