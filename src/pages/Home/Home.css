@@ -1,0 +1,617 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 99.88%;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.596);
+  height: 70px;
+  font-weight: 100px;
+  display: flex;
+}
+
+.logo {
+  color: white;
+  margin-left: 3em;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.navigation {
+  color: white;
+  justify-content: space-evenly;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.sign {
+  color: white;
+  justify-content: flex-end;
+  width: 35rem;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.sign div {
+  padding-left: 4rem;
+}
+
+.btn {
+  background-color: #faa527;
+}
+
+.mainScreen {
+  height: 120vh;
+  background-image: url(../../assets/main-bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.hero {
+  text-align: center;
+  color: white;
+  margin-top: 12rem;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+}
+
+.hero p {
+  font-size: 1.8em;
+  margin-top: 2rem;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.scroller {
+  color: white;
+  text-align: center;
+  margin-top: 15rem;
+  font-size: 1em;
+}
+
+.scrollLogo {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.gameChoice {
+  background-image: url(../../assets/the-games-bg.jpg);
+  background-size: cover;
+  height: 110vh;
+  display: flex;
+}
+
+.leftText {
+  color: white;
+  width: 40%;
+  padding-top: 15rem;
+  padding-left: 10rem;
+}
+
+.leftText h3 {
+  font-size: 1.5rem;
+}
+
+.leftText h1 {
+  font-size: 4.5rem;
+  margin-top: 1rem;
+}
+
+.carouselPersonal {
+  width: 55%;
+  height: 60%;
+  margin-top: 13rem;
+  margin-left: -1em;
+}
+
+.featuresPage {
+  background-image: url(../../assets/features.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+}
+
+.featureText {
+  color: white;
+  float: right;
+  margin-top: -580px;
+  margin-right: 10rem;
+}
+
+.featureText h3 {
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+
+.featureText h1 {
+  padding-top: 10px;
+  font-size: 5rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+}
+
+.featureText h4 {
+  font-size: 30px;
+  color: rgb(250, 165, 39);
+  margin-left: 80px;
+  margin-bottom: 30px;
+}
+
+.firstList {
+  margin-top: 5.6rem;
+  margin-bottom: 0.6rem;
+}
+
+.featureText p {
+  margin-left: 5.4rem;
+  margin-bottom: 93px;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
+.secondList {
+  margin-bottom: 2rem;
+}
+
+.featureLine {
+  margin-left: 55.6rem;
+  padding-top: 22rem;
+}
+
+.thirdList {
+  margin-top: 3.8rem;
+}
+
+.garisVertic {
+  height: 190px;
+  width: 1px;
+  border: 2px solid white;
+  margin-left: 56.3rem;
+  margin-top: -19rem;
+}
+
+/* Feature Line */
+
+.step {
+  position: relative;
+  min-height: 1em;
+  color: gray;
+}
+
+.title {
+  line-height: 1.5em;
+  font-weight: bold;
+}
+.caption {
+  font-size: 0.8em;
+}
+
+.step + .step {
+  margin-top: 1.5em;
+}
+
+.step > div:first-child {
+  position: static;
+  height: 0;
+  margin-top: 5rem;
+}
+
+.step > div:not(:first-child) {
+  margin-left: 1.5em;
+  padding-left: 1em;
+}
+
+/* Circle */
+.circle {
+  background: white;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 0 3px white;
+}
+
+.circle-1 {
+  background: black;
+  position: relative;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  border-radius: 100%;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 0 3px white;
+}
+
+/* Vertical Line */
+.circle:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  top: 1px;
+  right: 50%;
+  bottom: 1px;
+  left: 50%;
+  height: 100%;
+  width: 1px;
+  transform: scale(1, 2);
+  transform-origin: 50% -100%;
+  background-color: white;
+  z-index: -1;
+}
+
+.step:last-child .circle:after {
+  display: none;
+}
+
+.step.step-active {
+  color: white;
+  margin-top: 200px;
+}
+.step.step-active .circle {
+  background-color: black;
+}
+
+/* Feature Line End */
+
+.requirements {
+  background-image: url(../../assets/requirements.png);
+  background-size: cover;
+  background-position: center;
+  height: 120vh;
+  color: white;
+}
+
+.requirements p {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.requirements h1 {
+  margin-top: 2em;
+  margin-left: 3.4em;
+  font-size: 3.8em;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+}
+
+.requirements p.smallTitle {
+  padding-top: 2em;
+  font-size: 1.2em;
+}
+
+.tabel {
+  width: 20rem;
+  margin-left: 13rem;
+  margin-top: 5em;
+  border: 1px solid white;
+  padding: 1em 1em;
+}
+.tabel p {
+  text-align: start;
+  font-size: 2rem;
+  color: rgb(250, 165, 39);
+  margin-bottom: 0.4em;
+  letter-spacing: 0.1em;
+}
+
+.tabel h6 {
+  font-weight: 200;
+  font-size: 1.2em;
+}
+
+.sidedTabel {
+  display: flex;
+}
+
+.proc {
+  margin-left: 0px;
+}
+
+.store {
+  margin-left: 0px;
+}
+
+.memo,
+.store {
+  margin-top: 0px;
+  padding-bottom: 1.4em;
+}
+
+.bottomTabel {
+  width: 40rem;
+  margin-left: 13rem;
+  border: 1px solid white;
+  padding: 1em 1em;
+}
+
+.graph p {
+  text-align: start;
+  font-size: 2rem;
+  color: #faa527;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.2em;
+}
+
+.graph h6 {
+  font-weight: 100;
+  font-size: 1.2em;
+}
+
+table {
+  text-align: start;
+  padding: 0.3;
+}
+
+.topScores {
+  background-image: url(../../assets/top-score-bg.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  height: 120vh;
+}
+
+.scoreLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  height: 120vh;
+  width: 40%;
+  margin-left: 8em;
+}
+
+.scoreLeft h1 {
+  font-size: 4em;
+  font-weight: 400;
+  margin-bottom: 0.5em;
+}
+
+.scoreLeft p {
+  font-size: 1em;
+}
+
+.scoreRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 60%;
+}
+
+.btn-score {
+  margin-top: 2.5em;
+  margin-right: 20em;
+}
+
+.comment {
+  color: white;
+}
+
+.tweet {
+  border: 1px solid black;
+  width: 30rem;
+  background-color: rgb(24, 24, 24);
+  border-radius: 8px;
+  padding-top: 1rem;
+  margin-left: 15em;
+  padding-left: 1em;
+}
+
+.name-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.name {
+  color: rgb(250, 165, 39);
+  margin-bottom: 0px;
+}
+
+.photo {
+  margin-left: -5.3em;
+  margin-top: -0.2em;
+}
+
+.photoShadow {
+  margin-left: 3px;
+  height: 80px;
+  width: 55px;
+}
+
+.job {
+  opacity: 0.5;
+}
+
+.comm {
+  margin-left: 0.6em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.commIvan {
+  margin-left: 13px;
+  margin-top: 23px;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 13px;
+  margin-left: 13px;
+  margin-top: 7px;
+  margin-bottom: 19px;
+  opacity: 0.5;
+}
+
+.tweet img {
+  float: left;
+  padding-left: 10px;
+  padding-right: 15px;
+  border-radius: 50px;
+}
+
+.jada {
+  margin-top: 60px;
+  margin-left: 35px;
+}
+
+.aaron {
+  margin-top: 60px;
+  margin-left: 200px;
+}
+
+.tweet img.photoShadow,
+.photo {
+  height: 55px;
+  width: 80px;
+}
+
+.twitterCard-1 {
+  margin-left: 250px;
+}
+
+.twitterCard-2 {
+  margin-left: 220px;
+}
+
+.newsletter {
+  height: auto;
+  background-image: url(../../assets/newsletter.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.container6 {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  height: 110vh;
+  margin-left: 1rem;
+  margin-bottom: 5rem;
+}
+
+.image-newsletter {
+  margin-right: 2rem;
+  padding-top: 10rem;
+}
+.text-newsletter {
+  margin-left: 2rem;
+  padding-top: 13rem;
+  padding-left: 10rem;
+  color: #fff;
+}
+
+.text-newsletter h3 {
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.container6 .text-newsletter h2 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.text-newsletter p {
+  margin-bottom: 2rem;
+}
+
+.email-subs {
+  display: flex;
+  flex-direction: row;
+}
+
+.form-floating {
+  margin-right: -2em;
+}
+
+.form-floating input.form-control {
+  font-size: 1.5em;
+  color: #f2b345;
+}
+
+.email-subs .btn {
+  padding: 0.8em 1em 0.8em 1em;
+  font-size: large;
+}
+
+.form-control {
+  border: none;
+}
+
+
+.footer {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2.5em;
+  height: 20%;
+}
+
+.footer-up {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+}
+
+.navigasi a {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  word-spacing: 0;
+  margin: 5em;
+}
+.sosmed {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-line {
+  width: 70%;
+  border-bottom: 1px solid white;
+  justify-content: center;
+  margin: 10px 50px 0px 250px;
+  opacity: 0.6;
+}
+
+.footer-close {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.left-foot {
+  font-size: 12px;
+  color: grey;
+}
+.right-foot {
+  font-size: 12px !important;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .gameChoice {
+    display: column;
+  }
+}
