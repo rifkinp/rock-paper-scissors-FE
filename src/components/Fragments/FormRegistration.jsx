@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { EmailIcon, PasswordIcon, UsernameIcon, HomeIcon } from '../../assets';
+import { EmailIcon, PasswordIcon, UsernameIcon, HomeIcon } from '../../Assets';
 import AuthInput from '../Elements/AuthInput';
 import Gap from '../Elements/Gap';
 import ButtonYellow from '../Elements/ButtonYellow';
@@ -42,56 +42,52 @@ function FormRegistration() {
 
   return (
     <AuthBox>
-      <div className="flex flex-col justify-center items-center w-3/5">
-        <div className="relative w-full h-[20px] flex">
-          <div className="absolute w-full h-full top-[-30px] left-[-80px] flex justify-center items-center">
+      <div className='flex flex-col justify-center items-center w-3/5'>
+        <div className='relative w-full h-[20px] flex'>
+          <div className='absolute w-full h-full top-[-30px] left-[-80px] flex justify-center items-center'>
             <BackButton
               iconBckBtnProp={HomeIcon}
-              textBckBtnProp="Back to Home"
-              linkProp="/"
+              textBckBtnProp='Back to Home'
+              linkProp='/'
             />
           </div>
         </div>
-        <AuthTitle title="Registration" />
+        <AuthTitle title='Registration' />
         <Gap height={30} />
 
-        {error && <div className="text-white font-semibold">{error}</div>}
+        {error && <div className='text-white font-semibold'>{error}</div>}
         {isLoading && <div>Loading...</div>}
 
-        <form onSubmit={handleRegister} data-testid="register-form">
+        <form onSubmit={handleRegister} data-testid='register-form'>
           <AuthInput
             iconProp={UsernameIcon}
-            placeHolderProp="Username"
-            name="username"
-            typeProp="text"
+            placeHolderProp='Username'
+            name='username'
+            typeProp='text'
           />
 
           <Gap height={15} />
           <AuthInput
             iconProp={EmailIcon}
-            placeHolderProp="Email"
-            typeProp="email"
-            name="email"
+            placeHolderProp='Email'
+            typeProp='email'
+            name='email'
           />
           <Gap height={15} />
           <AuthInput
             iconProp={PasswordIcon}
-            placeHolderProp="Password"
-            typeProp="password"
-            name="password"
+            placeHolderProp='Password'
+            typeProp='password'
+            name='password'
           />
           <Gap height={40} />
-          <ButtonYellow
-            labelBtnYlw="Register"
-            type="submit"
-            disabled={isLoading}
-          />
+          <ButtonYellow labelBtnYlw='Register' type='submit' disabled={isLoading} />
         </form>
         <Gap height={50} />
         <AuthText
-          frontTextProp="Already have an account?"
-          backTextProp="Login here"
-          linkProp="/login"
+          frontTextProp='Already have an account?'
+          backTextProp='Login here'
+          linkProp='/login'
         />
       </div>
     </AuthBox>

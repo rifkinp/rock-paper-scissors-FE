@@ -1,11 +1,11 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { RectangleVert } from '../../assets';
+import { RectangleVert } from '../../Assets';
 
 function BoxProfile({ children }) {
   return (
     <div>
-      <img className="relative h-full w-full" src={RectangleVert} alt="box" />
+      <img className='relative h-full w-full' src={RectangleVert} alt='box' />
       {children}
     </div>
   );

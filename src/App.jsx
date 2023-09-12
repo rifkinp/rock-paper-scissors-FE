@@ -10,7 +10,6 @@ import VersusComputer from './pages/VersusComputer';
 import VersusPlayer from './pages/VersusPlayer';
 import PageNotFound from './pages/PageNotFound';
 import ProtectedRoute from './Utils/ProtectedRoute';
-import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

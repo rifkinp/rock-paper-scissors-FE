@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getDownloadURL, ref } from 'firebase/storage';
 import Button from '../Elements/Button/Button';
-import profileDefault from '../Assets/profile-default.svg';
+import { ProfileDefault } from '../Assets';
 import { storage } from '../../config/firebase.config';
 import FormUpdatePopUp from './FormUpdatePopUp';
 
@@ -18,7 +18,7 @@ function UserProfile() {
 
   // update user profile
   const [uploadPhoto, setUploadPhoto] = useState(null);
-  const [uploadFirebase, setUploadFirebase] = useState(profileDefault);
+  const [uploadFirebase, setUploadFirebase] = useState(ProfileDefault);
 
   // GET USER BIO
   useEffect(() => {
@@ -37,8 +37,8 @@ function UserProfile() {
         setDataUser(resultBio);
         const resultBioUser = hasilDataBio.data.dataUser.User_Bio;
         setDataUserBio(resultBioUser);
-        const resultImageProfile = hasilDataBio?.data.dataUser.Profile_Picture?.link
-        || profileDefault;
+        const resultImageProfile =
+          hasilDataBio?.data.dataUser.Profile_Picture?.link || ProfileDefault;
         setUploadFirebase(resultImageProfile);
       } catch (error) {
         // eslint-disable-next-line no-console
@@ -58,26 +58,26 @@ function UserProfile() {
   };
 
   return (
-    <div className="w-full items-center h-full flex flex-col justify-center">
-      <div className="pt-2">
+    <div className='w-full items-center h-full flex flex-col justify-center'>
+      <div className='pt-2'>
         <img
-          src={uploadFirebase !== null ? uploadFirebase : profileDefault}
-          className="w-20 h-20 mx-5"
-          alt="profile"
-          data-testid="profile-picture"
+          src={uploadFirebase !== null ? uploadFirebase : ProfileDefault}
+          className='w-20 h-20 mx-5'
+          alt='profile'
+          data-testid='profile-picture'
         />
       </div>
 
       <input
-        type="file"
-        data-testid="file-input"
+        type='file'
+        data-testid='file-input'
         onChange={(e) => {
           setUploadPhoto(e.target.files[0]);
         }}
       />
       <button
-        className="w-20 h-10"
-        type="button"
+        className='w-20 h-10'
+        type='button'
         onClick={async () => {
           try {
             const imagePath = uploadPhoto.name;
@@ -108,30 +108,30 @@ function UserProfile() {
         Submit
       </button>
 
-      <div className="w-full h-full">
-        <table className="w-full px-8 border-spacing-2 border-spacing-x-4 border-separate table-auto">
+      <div className='w-full h-full'>
+        <table className='w-full px-8 border-spacing-2 border-spacing-x-4 border-separate table-auto'>
           <tbody>
-            <tr className="break-all">
+            <tr className='break-all'>
               <td>Username</td>
               <td>:</td>
               <td>{dataUser?.username || ''}</td>
             </tr>
-            <tr className="break-all">
+            <tr className='break-all'>
               <td>Fullname</td>
               <td>:</td>
               <td>{dataUserBio?.fullname || ''}</td>
             </tr>
-            <tr className="break-all">
+            <tr className='break-all'>
               <td>Email</td>
               <td>:</td>
               <td>{dataUser?.email || ''}</td>
             </tr>
-            <tr className="break-all">
+            <tr className='break-all'>
               <td>Phone</td>
               <td>:</td>
               <td>{dataUserBio?.phoneNumber || ''}</td>
             </tr>
-            <tr className="break-all">
+            <tr className='break-all'>
               <td>Address</td>
               <td>:</td>
               <td>{dataUserBio?.address || ''}</td>
@@ -151,8 +151,8 @@ function UserProfile() {
         email={dataUser?.email}
       />
       <Button
-        variant="bg-[#9e5022]"
-        title="Update Profile"
+        variant='bg-[#9e5022]'
+        title='Update Profile'
         onClick={() => setShowPopUp(true)}
       />
     </div>

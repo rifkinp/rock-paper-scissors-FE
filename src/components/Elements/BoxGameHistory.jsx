@@ -1,11 +1,11 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { RectangleHorz } from '../../assets';
+import { RectangleHorz } from '../../Assets';
 
 function BoxGameHistory({ children }) {
   return (
     <div>
-      <img className="relative h-full w-full" src={RectangleHorz} alt="box" />
+      <img className='relative h-full w-full' src={RectangleHorz} alt='box' />
       {children}
     </div>
   );
@@ -16,8 +16,7 @@ BoxGameHistory.propTypes = {
 };
 
 BoxGameHistory.defaultProps = {
-  children: null, 
+  children: null,
 };
-
 
 export default BoxGameHistory;

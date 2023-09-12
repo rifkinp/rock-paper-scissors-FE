@@ -46,7 +46,7 @@ body {
 
 .mainScreen {
   height: 120vh;
-  background-image: url(../../assets/main-bg.jpg);
+  background-image: url(../../Assets/main-bg.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -88,7 +88,7 @@ body {
 }
 
 .gameChoice {
-  background-image: url(../../assets/the-games-bg.jpg);
+  background-image: url(../../Assets/the-games-bg.jpg);
   background-size: cover;
   height: 110vh;
   display: flex;
@@ -118,7 +118,7 @@ body {
 }
 
 .featuresPage {
-  background-image: url(../../assets/features.jpg);
+  background-image: url(../../Assets/features.jpg);
   background-size: cover;
   background-position: center;
   height: 120vh;
@@ -243,7 +243,7 @@ body {
 
 /* Vertical Line */
 .circle:after {
-  content: " ";
+  content: ' ';
   position: absolute;
   display: block;
   top: 1px;
@@ -273,7 +273,7 @@ body {
 /* Feature Line End */
 
 .requirements {
-  background-image: url(../../assets/requirements.png);
+  background-image: url(../../Assets/requirements.png);
   background-size: cover;
   background-position: center;
   height: 120vh;
@@ -363,7 +363,7 @@ table {
 }
 
 .topScores {
-  background-image: url(../../assets/top-score-bg.png);
+  background-image: url(../../Assets/top-score-bg.png);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -494,7 +494,7 @@ table {
 
 .newsletter {
   height: auto;
-  background-image: url(../../assets/newsletter.png);
+  background-image: url(../../Assets/newsletter.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -556,7 +556,6 @@ table {
 .form-control {
   border: none;
 }
-
 
 .footer {
   color: #fff;

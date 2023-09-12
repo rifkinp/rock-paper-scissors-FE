@@ -2,9 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Gap from '../Components/Elements/Gap';
 import ButtonGreen from '../Components/Elements/ButtonGreen';
-import {
-  VersusAlert, WinNotif, LoseNotif, DrawNotif,
-} from '../assets';
+import { VersusAlert, WinNotif, LoseNotif, DrawNotif } from '../Assets';
 import Background from '../Components/Elements/Background';
 import Image from '../Components/Elements/Image';
 import ListOfChoice from '../Components/Fragments/ListOfChoice';
@@ -64,34 +62,34 @@ function VersusComputer() {
 
   return (
     <Background>
-      <div className="relative w-full h-[20px] flex">
-        <div className="absolute w-full h-full top-[-100px] left-[20px] flex justify-center items-center">
+      <div className='relative w-full h-[20px] flex'>
+        <div className='absolute w-full h-full top-[-100px] left-[20px] flex justify-center items-center'>
           <GameNavbar />
         </div>
       </div>
-      <div className="w-full flex">
+      <div className='w-full flex'>
         <ListOfChoice
-          titleNameProp="Player 1"
+          titleNameProp='Player 1'
           choiceResponse={choiceUser}
           handleChange={handleChange}
         />
-        <div className="flex items-center justify-center w-1/10 h-auto">
+        <div className='flex items-center justify-center w-1/10 h-auto'>
           <Gap width={15} />
-          <Image className="w-[200px]" imageProp={resultImage} />
+          <Image className='w-[200px]' imageProp={resultImage} />
           <Gap width={15} />
         </div>
 
-        <ListOfChoice titleNameProp="Computer" choiceResponse={comChoice} />
+        <ListOfChoice titleNameProp='Computer' choiceResponse={comChoice} />
       </div>
       <Gap height={10} />
       <div
-        className="block"
+        className='block'
         style={{ display: resultImage !== VersusAlert ? 'none' : '' }}
       >
-        <ButtonGreen labelBtnGrn="Play" handleClick={handleClick} />
+        <ButtonGreen labelBtnGrn='Play' handleClick={handleClick} />
       </div>
       <div style={{ display: resultImage === VersusAlert ? 'none' : '' }}>
-        <ButtonYellow labelBtnYlw="PLAY AGAIN" handleClick={handleRefresh} />
+        <ButtonYellow labelBtnYlw='PLAY AGAIN' handleClick={handleRefresh} />
       </div>
     </Background>
   );

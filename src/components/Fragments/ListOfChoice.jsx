@@ -3,13 +3,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Gap from '../Elements/Gap';
 import Title from '../Elements/Title';
-import { PaperPic, RockPic, ScissorPic } from '../../assets';
+import { PaperPic, RockPic, ScissorPic } from '../../Assets';
 import Image from '../Elements/Image';
 
 function ListOfChoice(props) {
   const { choiceResponse, titleNameProp, handleChange } = props;
   return (
-    <div className="w-1/2 flex flex-col items-center justify-center">
+    <div className='w-1/2 flex flex-col items-center justify-center'>
       <Title titleName={titleNameProp} />
       <Gap height={30} />
       <div
@@ -19,7 +19,7 @@ function ListOfChoice(props) {
             : 'bg-[#feecbc]'
         }
       >
-        <Image imageProp={RockPic} alt="batu" handleChange={handleChange} />
+        <Image imageProp={RockPic} alt='batu' handleChange={handleChange} />
       </div>
       <Gap height={30} />
       <div
@@ -29,7 +29,7 @@ function ListOfChoice(props) {
             : 'bg-[#feecbc]'
         }
       >
-        <Image imageProp={ScissorPic} alt="gunting" handleChange={handleChange} />
+        <Image imageProp={ScissorPic} alt='gunting' handleChange={handleChange} />
       </div>
       <Gap height={30} />
       <div
@@ -40,9 +40,9 @@ function ListOfChoice(props) {
         }
       >
         <Image
-          className="w-[70px] hover:scale-[1.3] hover:cursor-pointer"
+          className='w-[70px] hover:scale-[1.3] hover:cursor-pointer'
           imageProp={PaperPic}
-          alt="kertas"
+          alt='kertas'
           handleChange={handleChange}
         />
       </div>

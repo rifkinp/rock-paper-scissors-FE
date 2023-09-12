@@ -4,16 +4,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Gap from '../Elements/Gap';
-import { PaperPic, RockPic, ScissorPic } from '../../assets';
+import { PaperPic, RockPic, ScissorPic } from '../../Assets';
 import TextOnCreateRoom from '../Elements/TextOnCreateRoom';
 
 function ChoiceRoom(props) {
   const { choiceResponse, handleClick } = props;
   return (
     <div>
-      <TextOnCreateRoom text="Please pick your choice" />
+      <TextOnCreateRoom text='Please pick your choice' />
       <Gap height={100} />
-      <div className="w-full h-[50px] flex items-center justify-center">
+      <div className='w-full h-[50px] flex items-center justify-center'>
         <div
           className={
             choiceResponse === 'batu'
@@ -22,9 +22,9 @@ function ChoiceRoom(props) {
           }
         >
           <img
-            className="w-[150px] hover:scale-[1.3] hover:cursor-pointer"
+            className='w-[150px] hover:scale-[1.3] hover:cursor-pointer'
             src={RockPic}
-            alt="batu"
+            alt='batu'
             onClick={handleClick}
           />
         </div>
@@ -37,9 +37,9 @@ function ChoiceRoom(props) {
           }
         >
           <img
-            className="w-[130px] hover:scale-[1.3] hover:cursor-pointer"
+            className='w-[130px] hover:scale-[1.3] hover:cursor-pointer'
             src={ScissorPic}
-            alt="gunting"
+            alt='gunting'
             onClick={handleClick}
           />
         </div>
@@ -52,9 +52,9 @@ function ChoiceRoom(props) {
           }
         >
           <img
-            className="w-[115px] hover:scale-[1.3] hover:cursor-pointer"
+            className='w-[115px] hover:scale-[1.3] hover:cursor-pointer'
             src={PaperPic}
-            alt="kertas"
+            alt='kertas'
             onClick={handleClick}
           />
         </div>

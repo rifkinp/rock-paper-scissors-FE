@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { HomeIcon, PasswordIcon, UsernameIcon } from '../../assets';
+import { HomeIcon, PasswordIcon, UsernameIcon } from '../../Assets';
 import AuthInput from '../Elements/AuthInput';
 import Gap from '../Elements/Gap';
 import ButtonYellow from '../Elements/ButtonYellow';
@@ -33,49 +33,49 @@ function FormLogin() {
 
   return (
     <AuthBox>
-      <div className="flex flex-col justify-center items-center w-3/5">
-        <div className="relative w-full h-[20px] flex">
-          <div className="absolute w-full h-full top-[-10px] left-[-10px] flex justify-center items-center">
+      <div className='flex flex-col justify-center items-center w-3/5'>
+        <div className='relative w-full h-[20px] flex'>
+          <div className='absolute w-full h-full top-[-10px] left-[-10px] flex justify-center items-center'>
             <BackButton
               iconBckBtnProp={HomeIcon}
-              textBckBtnProp="Back to Home"
-              linkProp="/"
+              textBckBtnProp='Back to Home'
+              linkProp='/'
             />
           </div>
         </div>
 
-        <AuthTitle title="Log in" />
+        <AuthTitle title='Log in' />
         <Gap height={30} />
-        {error && <div className="text-white font-semibold">{error}</div>}
+        {error && <div className='text-white font-semibold'>{error}</div>}
         {isLoading && <div>Loading...</div>}
         <form onSubmit={handleLogin}>
           <AuthInput
             iconProp={UsernameIcon}
-            placeHolderProp="Username"
-            name="username"
-            typeProp="text"
+            placeHolderProp='Username'
+            name='username'
+            typeProp='text'
           />
           <Gap height={15} />
           <AuthInput
             iconProp={PasswordIcon}
-            placeHolderProp="Password"
-            name="password"
-            typeProp="password"
+            placeHolderProp='Password'
+            name='password'
+            typeProp='password'
           />
 
           <Gap height={40} />
           <ButtonYellow
-            labelBtnYlw="Login"
+            labelBtnYlw='Login'
             // onSubmit={handleLogin}
-            type="submit"
+            type='submit'
             disabled={isLoading}
           />
         </form>
         <Gap height={50} />
         <AuthText
           frontTextProp="Don't have an account?"
-          backTextProp="Register here"
-          linkProp="/register"
+          backTextProp='Register here'
+          linkProp='/register'
         />
       </div>
     </AuthBox>

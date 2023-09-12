@@ -7,11 +7,11 @@ import { PropTypes } from 'prop-types';
 function Image({ imageProp, alt, handleChange }) {
   return (
     <img
-      className="w-[80px] hover:scale-[1.3] hover:cursor-pointer"
+      className='w-[80px] hover:scale-[1.3] hover:cursor-pointer'
       src={imageProp}
       alt={alt}
       onClick={handleChange}
-      data-testid="image-element"
+      data-testid='image-element'
     />
   );
 }
@@ -23,7 +23,7 @@ Image.propTypes = {
 };
 
 Image.defaultProps = {
-  imageProp: '../../assets/batu.png',
+  imageProp: '../../Assets/batu.png',
   alt: 'defaultImageAlt',
   handleChange: () => {},
 };

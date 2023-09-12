@@ -32,6 +32,7 @@ import RegisterIcon from './register-icon.png';
 import UserProfileIcon from './profile-button.png';
 import BgSidebarIcon from './bg-sidebar-icon.png';
 import Ribbon from './ribbon.png';
+import ProfileDefault from './profile-default.svg';
 
 export {
   EmailIcon,
@@ -68,4 +69,5 @@ export {
   UserProfileIcon,
   BgSidebarIcon,
   Ribbon,
+  ProfileDefault,
 };

@@ -5,7 +5,7 @@ import Background from '../Components/Elements/Background';
 import GameNavbar from '../Components/Fragments/GameNavbar';
 import TitleHistProf from '../Components/Elements/TitleHistProf';
 import FormBoxProfile from '../Components/Fragments/FormBoxProfile';
-import { RectangleHorz } from '../assets';
+import { RectangleHorz } from '../Assets';
 import Button from '../Components/Elements/Button/Button';
 
 function GameHistory() {
@@ -44,25 +44,25 @@ function GameHistory() {
 
   return (
     <Background>
-      <div className="relative w-full h-[20px] flex">
-        <div className="absolute w-full h-full top-[15px] left-[20px] flex justify-center items-center">
+      <div className='relative w-full h-[20px] flex'>
+        <div className='absolute w-full h-full top-[15px] left-[20px] flex justify-center items-center'>
           <GameNavbar />
         </div>
       </div>
-      <div className="w-full h-full flex flex-row">
-        <div className="w-2/5 flex justify-center items-center">
+      <div className='w-full h-full flex flex-row'>
+        <div className='w-2/5 flex justify-center items-center'>
           <FormBoxProfile />
         </div>
 
-        <div className="w-3/5 flex justify-center items-center">
-          <div className="relative h-full w-full bg-center bg-contain bg-no-repeat flex flex-col justify-center items-center">
-            <img className="relative h-5/6 w-auto" src={RectangleHorz} alt="box" />
-            <div className="absolute top-[30px]">
-              <TitleHistProf labelBoxTitle="Game History" />
+        <div className='w-3/5 flex justify-center items-center'>
+          <div className='relative h-full w-full bg-center bg-contain bg-no-repeat flex flex-col justify-center items-center'>
+            <img className='relative h-5/6 w-auto' src={RectangleHorz} alt='box' />
+            <div className='absolute top-[30px]'>
+              <TitleHistProf labelBoxTitle='Game History' />
             </div>
-            <div className="absolute overflow-auto h-3/5">
+            <div className='absolute overflow-auto h-3/5'>
               {histories.map((item, index) => (
-                <div className="w-[600px] flex" key={index.id}>
+                <div className='w-[600px] flex' key={index.id}>
                   <div className="m-[5px] text-[30px] bg-[#9e5022] font-['Chicle'] rounded-[10px] flex justify-center items-center w-[250px] cursor-default">
                     {item.roomName}
                   </div>
@@ -75,10 +75,10 @@ function GameHistory() {
                 </div>
               ))}
             </div>
-            <div className="absolute bottom-[23px]">
+            <div className='absolute bottom-[23px]'>
               <Button
-                variant="bg-[#9e5022]"
-                title="history in pdf"
+                variant='bg-[#9e5022]'
+                title='history in pdf'
                 onClick={handleOpenPdf}
               />
             </div>
