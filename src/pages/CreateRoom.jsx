@@ -1,33 +1,65 @@
-import React from "react";
-import RpsImageContainer from "../components/Elements/RpsImageContainer";
-import IMAGES from "../components/Assets";
-import Button from "../components/Elements/Button";
-import TitleH1 from "../components/Elements/TitleH1";
+/* eslint-disable no-alert */
+import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import Gap from '../Components/Elements/Gap';
+import Background from '../Components/Layouts/Background';
+import InputRoom from '../Components/Fragments/InputRoom';
+import ChoiceRoom from '../Components/Fragments/ChoiceRoom';
+import ButtonYellow from '../Components/Elements/ButtonYellow';
 
-const CreateRoom = () => {
+import GameNavbar from '../Components/Fragments/GameNavbar';
+
+function CreateRoom() {
+  const [roomName, setRoomName] = useState('');
+  const [choice, setChoice] = useState('');
+  const [isChoiceMade, setIsChoiceMade] = useState(false);
+  const navigate = useNavigate();
+
+  const handleChoiceClick = (event) => {
+    if (!isChoiceMade) {
+      setChoice(event.target.alt);
+    }
+  };
+
+  const handleCreateRoom = async () => {
+    const token = localStorage.getItem('accessToken');
+    try {
+      await axios.post(
+        'https://chapter-platinum-team-2-koet.vercel.app/user/createroom',
+        { roomName, choicePlayer1: choice },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        },
+      );
+      setIsChoiceMade(true);
+      navigate('/dashboard');
+      alert('Room berhasil ter-record');
+    } catch (error) {
+      alert('Tolong masukan Nama Room dan Pilihanmu');
+    }
+  };
+
   return (
-    <div className="w-full h-full flex flex-col justify-evenly items-center bg-gray-900">
-      <div>
-        <div className="text-2xl font-bold text-metal mb-10 text-center">
-          <input
-            type="text"
-            className="w-full text-mandarin rounded-md border-2 bg-transparent border-metal py-1 px-3 focus:text-white"
-            placeholder="Input Game Room Name"
-            name="room-name"
-          />
+    <Background>
+      <div className="relative w-full h-[20px] flex">
+        <div className="absolute w-full h-full top-[-85px] left-[20px] flex justify-center items-center">
+          <GameNavbar />
         </div>
-        <TitleH1 title1="Create Room" />
       </div>
-      <div className="w-100 flex gap-20">
-        <RpsImageContainer src={IMAGES.RpsBatu} id="player1" />
-        <RpsImageContainer src={IMAGES.RpsKertas} id="player1" />
-        <RpsImageContainer src={IMAGES.RpsGunting} id="player1" />
-      </div>
-      <div className="mb-20">
-        <Button title="Create Room" variant="bg-mandarin" />
-      </div>
-    </div>
+      <InputRoom
+        handleChange={(event) => {
+          setRoomName(event.target.value);
+        }}
+      />
+      <Gap height={80} />
+      <ChoiceRoom handleClick={handleChoiceClick} choiceResponse={choice} />
+      <Gap height={120} />
+      <ButtonYellow labelBtnYlw="Create Room" handleClick={handleCreateRoom} />
+    </Background>
   );
-};
+}
 
 export default CreateRoom;

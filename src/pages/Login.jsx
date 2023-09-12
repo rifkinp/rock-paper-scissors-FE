@@ -1,13 +1,13 @@
-import React from "react";
-import AuthLayouts from "../components/Layouts/AuthLayouts";
-import FormLogin from "../components/Fragments/FormLogin";
+import React from 'react';
+import AuthBg from '../Components/Elements/AuthBg';
+import FormLogin from '../Components/Fragments/FormLogin';
 
-export const Login = () => {
+function Login() {
   return (
-    <AuthLayouts title="Login">
+    <AuthBg>
       <FormLogin />
-    </AuthLayouts>
+    </AuthBg>
   );
-};
+}
 
 export default Login;
