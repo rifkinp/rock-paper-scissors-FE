@@ -8,7 +8,7 @@ import ListOfChoice from '../Components/Fragments/ListOfChoice';
 import Gap from '../Components/Elements/Gap';
 import Image from '../Components/Elements/Image';
 import { VersusAlert, WinNotif, LoseNotif, DrawNotif } from '../Assets';
-import Background from '../Components/Elements/Background';
+import Background from '../Components/Layouts/Background';
 import GameNavbar from '../Components/Fragments/GameNavbar';
 import ButtonGreen from '../Components/Elements/ButtonGreen';
 

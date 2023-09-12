@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthBg from '../Components/Elements/AuthBg';
+import AuthBg from '../Components/Layouts/AuthBg';
 import FormRegistration from '../Components/Fragments/FormRegistration';
 
 function Register() {

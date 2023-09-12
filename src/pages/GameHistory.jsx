@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Background from '../Components/Elements/Background';
+import Background from '../Components/Layouts/Background';
 import GameNavbar from '../Components/Fragments/GameNavbar';
 import TitleHistProf from '../Components/Elements/TitleHistProf';
 import FormBoxProfile from '../Components/Fragments/FormBoxProfile';

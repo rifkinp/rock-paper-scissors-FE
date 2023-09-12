@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { getDownloadURL, ref } from 'firebase/storage';
 import Button from '../Elements/Button/Button';
-import { ProfileDefault } from '../Assets';
+import { ProfileDefault } from '../../Assets';
 import { storage } from '../../config/firebase.config';
 import FormUpdatePopUp from './FormUpdatePopUp';
 

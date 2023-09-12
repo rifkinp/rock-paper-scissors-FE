@@ -3,7 +3,7 @@ import axios from 'axios';
 import Gap from '../Components/Elements/Gap';
 import ButtonGreen from '../Components/Elements/ButtonGreen';
 import { VersusAlert, WinNotif, LoseNotif, DrawNotif } from '../Assets';
-import Background from '../Components/Elements/Background';
+import Background from '../Components/Layouts/Background';
 import Image from '../Components/Elements/Image';
 import ListOfChoice from '../Components/Fragments/ListOfChoice';
 import GameNavbar from '../Components/Fragments/GameNavbar';
